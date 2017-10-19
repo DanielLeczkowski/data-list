@@ -1,5 +1,8 @@
 
 $(document).ready(function(){
+    
+   
+
     var carousel = $(".carousel"),
     currdeg  = 0;
     var currentDivNumber = 0;
@@ -44,6 +47,7 @@ $(document).ready(function(){
         class: 'f'
     }
     ];
+
 function addUser(){
     for (var i=0; i<users.length; i++) {
      $('.'+`${users[i].class}`).append(`<span class="number">${i+1}</span>`);
@@ -53,5 +57,59 @@ function addUser(){
     }
     
 }
+ addUser();
+
+$(".next").on("click", { d: "n" }, rotate);
+$(".prev").on("click", { d: "p" }, rotate);
+
+function rotate(e){
+  if(e.data.d=="n"){
+      
+    currdeg = currdeg - 60;
+    currentDivNumber++;
+        $(`.${divTable[currentDivNumber]}`).css({'background-color':'#959595',
+    'color':'#ffffff'});
+        $(`.${divTable[currentDivNumber-1]}`).css({'background-color':'#eebe7c',
+    'color':'#eebe7c',});
+      if($())
+    if(currentDivNumber >= 6 ){
+      currentDivNumber = 0;
+      $(`.${divTable[currentDivNumber]}`).css({'background-color':'#959595',
+    'color':'#ffffff'});
+      
+    } else if(currentDivNumber <= -1){
+      currentDivNumber = 5;
+      $(`.${divTable[currentDivNumber]}`).css({'background-color':'#959595',
+    'color':'#ffffff'});
+    }
+  }
+ if(e.data.d=="p"){
+    currdeg = currdeg + 60;
+    currentDivNumber--;
+       $(`.${divTable[currentDivNumber]}`).css({'background-color':'#959595',
+    'color':'#ffffff'});
+       $(`.${divTable[currentDivNumber+1]}`).css({'background-color':'#eebe7c',
+    'color':'#eebe7c'});
+    if(currentDivNumber <=-1 ){
+      currentDivNumber = 5;
+      $(`.${divTable[currentDivNumber]}`).css({'background-color':'#959595',
+    'color':'#ffffff'});
+    } else if(currentDivNumber >= 6){
+      currentDivNumber = 0;
+      $(`.${divTable[currentDivNumber]}`).css({'background-color':'#959595',
+    'color':'#ffffff'});
+    }
+  }
+  carousel.css({
+  
+    "-webkit-transform": "rotateY("+currdeg+"deg)",
+    "-moz-transform": "rotateY("+currdeg+"deg)",
+    "-o-transform": "rotateY("+currdeg+"deg)",
+    "transform": "rotateY("+currdeg+"deg)",
+ });
+};
+    
 });
+
+
 
