@@ -41,3 +41,28 @@ body {
         display: flex;
         justify-content: center;
       }
+
+        .a {
+          transform: rotateY(0deg) translateZ(250px);
+
+        }
+        .b {
+          transform: rotateY(60deg) translateZ(250px);
+          
+        }
+        .c {
+          transform: rotateY(120deg) translateZ(250px);
+          
+        }
+        .d {
+          transform: rotateY(180deg) translateZ(250px);
+          
+        }
+        .e {
+          transform: rotateY(240deg) translateZ(250px);
+          ;
+        } 
+        .f {
+          transform: rotateY(300deg) translateZ(250px);
+          
+        }
