@@ -84,6 +84,7 @@ body {
           top: 15%;
           left: 50%;
           transform: translate(-50%);
+          color:#fff;
         }
         .age{
           position: absolute;
@@ -97,3 +98,22 @@ body {
           top: 80%;
           font-size: 21px;
         }
+.next, .prev {
+  color: #444;
+  position: absolute;
+  top: 250px;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: #959595;
+  border-radius: 5px;
+  border-top: 1px solid #FFF;
+  box-shadow: 0 5px 0 #737373;
+  transition: box-shadow 0.1s, top 0.1s;
+}
+.next:hover, .prev:hover { color: #000; }
+.next:active, .prev:active {
+  top: 254px;
+  box-shadow: 0 1px 0 #959595;
+}
+.next { right: 5em; }
+.prev { left: 5em; }
