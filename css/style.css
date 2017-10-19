@@ -66,3 +66,34 @@ body {
           transform: rotateY(300deg) translateZ(250px);
           
         }
+
+        .number{
+          position: absolute;
+          top: 5%;
+          left: 5%;
+          border: 1px solid #eebe7c;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          align-self: center;
+          background-color: #eebe7c;
+          
+        }
+        .name{
+          position: absolute;
+          top: 15%;
+          left: 50%;
+          transform: translate(-50%);
+        }
+        .age{
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%);
+          font-size: 20px;
+        }
+        .phone{
+          position: absolute;
+          top: 80%;
+          font-size: 21px;
+        }
