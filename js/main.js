@@ -44,5 +44,14 @@ $(document).ready(function(){
         class: 'f'
     }
     ];
+function addUser(){
+    for (var i=0; i<users.length; i++) {
+     $('.'+`${users[i].class}`).append(`<span class="number">${i+1}</span>`);
+     $('.'+`${users[i].class}`).append(`<span class="name">${users[i].name}</span>`);
+     $('.'+`${users[i].class}`).append(`<span class="age">${users[i].age+' lat'}</span>`);
+     $('.'+`${users[i].class}`).append(`<span class="phone">${users[i].phone}</span>`);
+    }
+    
+}
 });
 
